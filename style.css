@@ -1,0 +1,164 @@
+body1{background-color: #efd5ee;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly}
+
+.emoji{
+position: absolute;
+ height:100vh;   
+width:100%;
+background-color:#b77ab6 ;
+    box-shadow: 2px 2px 10px rgb(149, 87, 168);
+}
+.butt{
+    background-color: #adf367;
+    color:red;
+    box-shadow: 2px 2px 15px green;
+    margin:10px auto;
+    display:flex;
+    justify-content: center;
+    
+}
+.butt:hover{
+    background-color: #09f43c;
+
+}
+.ques{
+    margin: 8px auto;
+    color:deeppink;
+    font-weight: 900;
+    background-color: #09f43c;
+    box-shadow: 2px 2px 12px red;
+    width: 50%;
+}
+.form1{
+    height:30px;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+.notes{
+    background-image:url(wish.jpeg) ;
+    background-size:cover;
+    height:330px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#wish{
+    background-color:rgb(117, 232, 234);
+    margin-top: 8px;
+    width:50%;
+    box-shadow: 4px 4px 15px violet;
+    border-radius: 40%;
+}
+
+.com{
+    font-family: 'Sue Ellen Francisco', cursive;
+    text-align: center;
+    font-weight: 700;
+    color: white;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    padding: 2.2px;
+    width: 50%;
+    background-color: hotpink;
+    height:100vh;
+    margin-top: 20px;
+    border: 2px solid red;
+    box-shadow: 2px 3px 18px violet;
+    padding: 20px;
+}
+.com:hover{
+    font-weight:900;
+    font-size:1.7em;
+    width:60%;
+    margin:4px solid red;
+    box-shadow:4px 6px 18px blue;
+    
+
+}
+
+.click1{
+    color:darkred;
+    background-color: greenyellow;
+    opacity: 0.7;
+    width:40%;
+}
+.click1:hover{
+    height: 2em;
+    opacity:1;
+    border-radius: 25%;
+}
+.note{
+    color:red;background-color: rgb(54, 192, 192);height: 150px;
+    width:50%;
+    text-align: center;
+    margin:10px auto;
+    display: flex;
+    align-items: center;
+    box-shadow: 3px 3px 18px rebeccapurple;
+    font-weight: 400;
+}
+.note:hover{
+    font-weight: 900;
+    background-color: aqua;
+    width: 52%;
+    box-shadow: 4px 4px 19px red;
+}
+.cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.alpha{
+    background-color: #09f43c;
+    color: red;
+    border: 2px solid darkred;
+    height: 35px;
+}
+.alpha:hover{
+height: 40px;
+width: 100px;
+
+}
+.option{
+    height:300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.direction,.option1,.option2,.option3,.option4{
+    height:75px;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.direction:hover{
+    border: 3px dotted black;
+    
+}
+.option1:hover{border:3px dashed black;
+text-decoration: underline;}
+.option2:hover{
+    border:3px dashed black;
+    text-decoration: underline;
+
+}
+.option3:hover{
+    border: 3px  dashed black;
+    text-decoration: underline;
+
+}
+.option4:hover{
+    border: 3px dashed black;
+    text-decoration: underline;
+}
+.know:hover{
+    color:rgb(248, 46, 5);
+}
