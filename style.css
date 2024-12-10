@@ -43,6 +43,7 @@ background-color:#b77ab6 ;
     background-image:url(wish.jpeg) ;
     background-size:cover;
     height:330px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,18 +64,18 @@ background-color:#b77ab6 ;
     font-size: 1.5em;
     line-height: 1.5em;
     padding: 2.2px;
-    width: 50%;
-    background-color: hotpink;
+    width: 80%;
+   
     height:100vh;
     margin-top: 20px;
     border: 2px solid red;
-    box-shadow: 2px 3px 18px violet;
+    
     padding: 20px;
 }
 .com:hover{
     font-weight:900;
     font-size:1.7em;
-    width:60%;
+    width:85%;
     margin:4px solid red;
     box-shadow:4px 6px 18px blue;
     
@@ -84,18 +85,25 @@ background-color:#b77ab6 ;
 .click1{
     color:darkred;
     background-color: greenyellow;
-    opacity: 0.7;
-    width:40%;
+    opacity: 1;
+    width:60%;
+    font-size: large;
+    border-radius: 10px;
+    margin-top: 20px;
+    height: 60px;
+
 }
 .click1:hover{
     height: 2em;
-    opacity:1;
+    
     border-radius: 25%;
 }
 .note{
-    color:red;background-color: rgb(54, 192, 192);height: 150px;
-    width:50%;
+    color:red;height: 150px;
+    width:80%;
     text-align: center;
+    line-height: 1.5rem;
+    font-size: 0.8rem;
     margin:10px auto;
     display: flex;
     align-items: center;
@@ -105,13 +113,15 @@ background-color:#b77ab6 ;
 .note:hover{
     font-weight: 900;
     background-color: aqua;
-    width: 52%;
+    width: 82%;
     box-shadow: 4px 4px 19px red;
 }
 .cont{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 10px;
+    width: 100%;
 }
 .alpha{
     background-color: #09f43c;
@@ -138,6 +148,8 @@ width: 100px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    border-radius: 20px;
+    border: 2px solid black;
 }
 .direction:hover{
     border: 3px dotted black;
@@ -162,3 +174,25 @@ text-decoration: underline;}
 .know:hover{
     color:rgb(248, 46, 5);
 }
+.image {
+    height: 80px;
+    width: 80px;
+    margin-top: 10px;
+    margin-bottom: 12px;
+    border-radius: 50%;
+    border: 4px solid rgb(250, 3, 3);
+    animation: resize 1s infinite alternate;
+    
+     /* Animate the resize effect */
+}
+
+@keyframes resize {
+    0% {
+        transform: scale(1); /* Original size */
+    }
+    100% {
+        transform: scale(1.2); /* Enlarged size */
+    }
+}
+
+

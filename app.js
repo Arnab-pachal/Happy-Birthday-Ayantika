@@ -1,104 +1,106 @@
 
+let box = document.querySelector(".style");
+box.style.height = '600px';
+box.style.width = '600px';
+
+const textArray = ['H','A','P','P','Y','','B','I','R','T','H','D','A','Y','','A','Y','A','N','T','I','K','A'];
+const container = document.getElementById('letter-reveal');
+
+function revealLetters() {
+
+    container.innerHTML = '';
+
+    textArray.forEach((letter, index) => {
+        if (letter === '') {
+          
+            const br = document.createElement('br');
+            container.appendChild(br);
+        } else {
+     
+            const span = document.createElement('span');
+            span.textContent = letter;
+            span.classList.add('letter');
+            container.appendChild(span);
+            span.style.animationDelay = `${index * 0.2}s`;
+        }
+    });
+}
+function startAnimationLoop() {
+    revealLetters(); 
+    setInterval(() => {
+        revealLetters();
+    }, 8000);
+}
+startAnimationLoop();
+
 document.addEventListener("DOMContentLoaded", function() {
-  // Get the clickable div element
-  let clickableDiv = document.getElementById("next1");
 
-  // Add click event listener to the div
-  clickableDiv.addEventListener("click", function() {
-      // Navigate to another page
-      window.location.href = "page6.html"; // Replace "another_page.html" with the actual URL of the page you want to navigate to
+    let clickableDiv = document.getElementById("next1");
+    clickableDiv.addEventListener("click", function() {
+    window.location.href = "page6.html";
+    });
   });
-});
-
-
-
-
-
-  let audio = document.getElementById("myAudio");
-
-  function playMusic() {
-    audio.play();
+  
+  const card = document.querySelector(".card");
+  setInterval(function() {
+   
+   
+    console.log(card.classList)
+  if(card.classList.contains('rotate')){card.classList.remove('rotate');console.log(card.classList.contains('rotate'))}
+  else{card.classList.add('rotate');}
+    console.log("rotation happend") 
+  }, 4000); 
+   
+  //for music button of page605
+  let playstyle = async function(music){
+    music.style.color ='red';
+    music.style.width = '160px';
+    music.style.height='55px';
+    music.style.fontWeight='900';
+    music.style.display='flex';
+    music.style.alignItems ='center'
+    music.style.justifyContent ='center'
+    music.style.textAlign = 'center'
+    music.style.opacity = 1;
+    music.style.boxShadow = '3px 3px 18px rgb(0, 38, 255)';
+    music.style.backgroundColor='rgb(106, 252, 8)'
+    return music;
   }
-
-  function pauseMusic() {
-    audio.pause();
+  let pausestyle = async function(music){
+    music.style.width = '150px';
+    music.style.color='darked';
+    music.style.height='55px';
+    music.style.fontWeight='800';
+    music.style.display='flex';
+    music.style.alignItems ='center'
+    music.style.justifyContent ='center'
+    music.style.textAlign = 'center'
+    music.style.opacity = 0.8;
+    music.style.backgroundColor='rgb(106, 252, 8)'
+    return music;
   }
-  let a=document.getElementById("audio2");
-  function play1Music(){
-    a.play();
-  }
-  function pause1Music(){
-    a.pause();
-  }
- let shayeri=document.querySelectorAll(".shayeri");
- let divs= document.querySelectorAll(".songs");
- let strbtn1=document.querySelector(".start1");
- let strbtn2=document.querySelector(".start2");
- let strbtn3=document.querySelector(".start3");
-
- let res=0;
- let h=0;
- let i=0;
- 
- divs[0].addEventListener("click",()=>{
-  if(res==0){shayeri[0].play();
-    alert(" FIRST SHAYERI FOR AYANTIKA\n CLICK AGAIN TO PAUSE");
-    strbtn1.setAttribute("src","on.jpg");
-    divs[0].style.border="3px solid black"
-    divs[0].style.backgroundColor="#fb25a5";
+  
+   let music1 = document.querySelector("#music1");
+   let music2 = document.querySelector("#music2");
+   music1.addEventListener('click',async()=>{
+    let audio1 = document.querySelector("#audio1");
+    if(audio1.paused){
+      await playstyle(music1);
+      audio1.play();}
+    else{
+      await pausestyle(music1);
+      audio1.pause();}
+    })
+  
+   music2.addEventListener('click',async()=>{let audio2 = document.querySelector("#audio2");
+    if(audio2.paused){
+       await playstyle(music2)
+        audio2.play();
+     }
+    else{
+      await pausestyle(music2);
+      audio2.pause();}
+   })
     
-  res=1;}
-  else{shayeri[0].pause();
-    strbtn1.setAttribute("src","off.jpg");
-    alert("ITS PAUSED");
-    divs[0].style.border="2px solid black"
-    divs[0].style.backgroundColor="#f582c7";
-    
-  res=0;}
-
- })
- 
- divs[1].addEventListener("click",()=>{
-  if(h==0){shayeri[1].play();
-    alert(" ITS WISH OF ARNAB TO AYANTIKA\n CLICK AGAIN TO PAUSE");
-    strbtn2.setAttribute("src","on.jpg");
-    divs[1].style.border="3px solid black"
-    divs[1].style.backgroundColor="#fb25a5";
-    
-  h=1;}
-  else{shayeri[1].pause();
-    strbtn2.setAttribute("src","off.jpg");
-    alert("ITS PAUSED");
-    divs[1].style.border="2px solid black"
-    divs[1].style.backgroundColor="#f582c7";
-  h=0;}
-
- })
-
- divs[2].addEventListener("click",()=>{
-  if(i==0){shayeri[2].play();
-    alert(" SECOND SHAYERI FOR AYANTIKA\n CLICK AGAIN TO PAUSE");
-    strbtn3.setAttribute("src","on.jpg");
-    divs[2].style.border="3px solid black"
-    divs[2].style.backgroundColor="#fb25a5";
-    
-  i=1;}
-  else{shayeri[2].pause();
-    strbtn3.setAttribute("src","off.jpg");
-    alert("ITS PAUSED");i=0;
-    divs[2].style.border="2px solid black"
-    divs[2].style.backgroundColor="#f582c7";}
-
- })
- let img1 =document.querySelector(".img1");
- let img3=document.querySelector(".img3");
- img1.addEventListener("click",()=>{
-  alert("Happy Birthday Ayantika");
- })
- img3.addEventListener("click",()=>{
-  alert("Happy Birthday to you Ayantika");
- })
-
-
-
- 
+  
+  

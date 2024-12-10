@@ -9,10 +9,10 @@ document.addEventListener('DOMContentLoaded', function () {
 });
  let image=document.querySelector(".image");
  image.addEventListener("click",()=>{
-    image.style.height="55px";
+    image.style.width="80px";
     
     let mus=document.querySelector("#music1");  
-    image.style.width="50px";
+    image.style.width="80px";
     mus.play();
     
  })
